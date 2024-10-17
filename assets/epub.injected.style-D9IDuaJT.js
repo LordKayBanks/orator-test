@@ -1,16 +1,4 @@
-const n=`// https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html
-// background-image: url('https://img.freepik.com/free-photo/old-book-open-dark-wood-background_1373-581.jpg?t=st=1728925351~exp=1728928951~hmac=46e4fcba23a8a6d6eb1406c9b0a6a1d6636b15fe7f0f2f83ce0c52c2390b2156&w=900');
-body {
-   background: transparent;
-   padding-top: 60px !important;
-   padding-bottom: 40px !important;
-
-   box-sizing: border-box;
-   word-wrap: break-word;
-   line-break: strict;
-}
-
-orator {
+const n=`orator {
    // --sentence-bgColor : transparent;
    // --translation-color: #373c3f;
    // --translation-bgColor: #fbe1d3;
@@ -44,7 +32,7 @@ orator {
    --translation2-color: #113c55;
    --translation2-bgColor: rgba(181, 198, 137, 0.45);
 
-   // =============
+   /* ============= */
    --sentence-active-color: #020b11;
    --sentence-active-bgColor: rgba(239, 211, 105, 1);
 
@@ -54,7 +42,7 @@ orator {
    --translation2-active-color: #113c55;
    --translation2-active-bgColor: rgba(181, 198, 137, 1);
 
-   // margin-right: 0.25rem;
+   /* margin-right: 0.25rem;  */
    /* =========================== translation base style ========================== */
    /* ============================================================================= */
    .orator-sentence {
