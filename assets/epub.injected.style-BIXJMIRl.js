@@ -54,10 +54,14 @@ const n=`orator {
       transition: all 0.4s ease-in-out;
 
       &::selection {
-         // color: var(--sentence-active-bgColor) !important;
-         // background-color: var(--sentence-active-color) !important;
-         color: rgba(239, 211, 105, 1) !important;
-         background-color: #083003 !important;
+         // color: var(--translation-active-color) !important;
+         // background-color: var(--translation-active-bgColor) !important;
+
+         // color: rgba(239, 211, 105, 1) !important;
+         // background-color: #083003 !important;
+
+         color: whitesmoke !important;
+         background-color: maroon !important;
       }
    }
 
@@ -72,6 +76,9 @@ const n=`orator {
       &::selection {
          color: var(--translation-active-bgColor) !important;
          background-color: var(--translation-active-color) !important;
+
+         // color: maroon !important;
+         // background-color: gold !important;
          // text-shadow: 1px 1px 1px #35E02CFF;
       }
    }
@@ -85,8 +92,10 @@ const n=`orator {
       transition: all 0.4s ease-in-out;
 
       &::selection {
-         color: var(--translation2-active-bgColor) !important;
-         background-color: var(--translation2-active-color) !important;
+         color: white !important;
+         background-color: rgb(81, 10, 81) !important;
+         // color: yellow !important;
+         // background-color: black !important;
          // text-shadow: 1px 1px 1px #35E02CFF;
       }
    }
