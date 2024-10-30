@@ -1,4 +1,13 @@
-const n=`orator {
+const n=`@keyframes skeleton-loading {
+   0% {
+      background-position: 100% 0;
+   }
+   100% {
+      background-position: -100% 0;
+   }
+}
+
+orator {
    // --sentence-bgColor : transparent;
    // --translation-color: #373c3f;
    // --translation-bgColor: #fbe1d3;
@@ -53,7 +62,8 @@ const n=`orator {
       line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
-      &::selection {
+      &::selection,
+      .current-word {
          // color: var(--translation-active-color) !important;
          // background-color: var(--translation-active-bgColor) !important;
 
@@ -67,31 +77,63 @@ const n=`orator {
 
    .orator-translation {
       border-radius: 4px;
-      color: var(--translation-color) !important;
-      background: var(--translation-bgColor) !important;
+      color: var(--translation-color);
+      background: var(--translation-bgColor);
       font-size: clamp(12px, 1em, 21px) !important;
       line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
-      &::selection {
+      &.translation-skeleton {
+         color: transparent;
+         // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+         background: linear-gradient(
+            90deg,
+            rgba(17, 60, 85, 0.15) 25%,
+            rgba(17, 60, 85, 0.5) 50%,
+            rgba(17, 60, 85, 0.15) 75%
+         );
+         background-size: 200% 100%;
+         animation: skeleton-loading 3s infinite linear;
+      }
+
+      &::selection,
+      .current-word {
          color: var(--translation-active-bgColor) !important;
          background-color: var(--translation-active-color) !important;
+         box-sizing: border-box;
+         border-top: 1px solid #090223;
+         border-bottom: 1px solid #090223;
+         // border-radius: 4px;
+         // text-shadow: 1px 1px 1px #35e02cff;
 
          // color: maroon !important;
          // background-color: gold !important;
-         // text-shadow: 1px 1px 1px #35E02CFF;
       }
    }
 
    .orator-translation2 {
       border-radius: 4px;
-      color: var(--translation2-color) !important;
-      background: var(--translation2-bgColor) !important;
+      color: var(--translation2-color);
+      background: var(--translation2-bgColor);
       font-size: clamp(12px, 1em, 21px) !important;
       line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
-      &::selection {
+      &.translation-skeleton {
+         color: transparent;
+         background: linear-gradient(
+            90deg,
+            rgba(181, 198, 137, 0.35) 25%,
+            rgba(181, 198, 137, 1) 50%,
+            rgba(181, 198, 137, 0.35) 75%
+         );
+         background-size: 200% 100%;
+         animation: skeleton-loading 3s infinite linear;
+         animation-delay: 1.5s;
+      }
+
+      &::selection,
+      .current-word {
          color: white !important;
          background-color: rgb(81, 10, 81) !important;
          // color: yellow !important;
