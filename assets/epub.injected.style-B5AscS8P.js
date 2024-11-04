@@ -176,7 +176,7 @@ orator {
       cursor: pointer;
    }
    &:hover {
-      cursor: url('/src/assets/cursor images/speaker-cursor-32-1.png'), pointer;
+      cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
    }
 }
 
