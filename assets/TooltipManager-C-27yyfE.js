@@ -10,8 +10,8 @@ const o=`.tooltip {
    box-sizing: border-box;
    font-family: system-ui, -apple-system, sans-serif;
 
-   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-   /* box-shadow: 2px 4px 12px 3px black; */
+   // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
+   box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 1);
    /* backdrop-filter: blur(10px); */
 
    display: flex;
@@ -32,8 +32,8 @@ const o=`.tooltip {
 }
 
 .word-wrapper {
-   color: black;
-   background: red;
+   color: rgb(2, 2, 26);
+   background: orange;
    border-radius: 4px;
 }
 

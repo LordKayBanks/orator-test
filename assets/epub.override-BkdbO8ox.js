@@ -1,7 +1,7 @@
 const n=`body {
    background: transparent !important;
    padding-top: 60px !important;
-   padding-bottom: 40px !important;
+   padding-bottom: 60px !important;
 
    // box-sizing: border-box;
    // word-wrap: break-word;
