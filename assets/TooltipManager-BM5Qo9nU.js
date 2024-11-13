@@ -47,7 +47,8 @@ const n=`.word-wrapper,
       height: 25px;
       width: 25px;
 
-      background-image: url('/images/note.svg');
+      // background-image: url('/images/note.svg');
+      background-image: url('/images/note.svg'), url('/orator-test/images/note.svg');
       background-size: 25px 25px;
       background-repeat: no-repeat;
    }
@@ -77,15 +78,15 @@ const n=`.word-wrapper,
       height: 100%;
       width: 30px;
 
+      // background-image: url('/images/highlight_icon.svg');
+      background-image: url('/images/highlight_icon.svg'), url('/orator-test/images/highlight_icon.svg');
       background-size: 25px 25px;
       background-repeat: no-repeat;
       filter: drop-shadow(2px 4px 6px black);
    }
    .tooltip-selection-left-icon {
-      background-image: url('/images/highlight_icon.svg');
    }
    .tooltip-selection-right-icon {
-      background-image: url('/images/highlight_icon.svg');
    }
 }
 
@@ -133,7 +134,8 @@ const n=`.word-wrapper,
       height: 30px;
       width: 30px;
 
-      background-image: url('/images/sound.svg');
+      // background-image: url('/images/sound.svg');
+      background-image: url('/images/sound.svg'), url('/orator-test/images/sound.svg');
       background-size: 25px 25px;
       background-repeat: no-repeat;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.643));
