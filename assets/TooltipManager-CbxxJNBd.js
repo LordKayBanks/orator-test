@@ -7,6 +7,17 @@ const n=`.word-wrapper,
    transition: all 0.2s ease-in-out;
 }
 
+@keyframes tooltipAnimation {
+   from {
+      opacity: 0;
+      height: 0px;
+   }
+   to {
+      opacity: 1;
+      height: 150px;
+   }
+}
+
 .tooltip {
    --tooltip-bg-color: whitesmoke;
    --tooltip-pointer-height: 15px;
@@ -28,12 +39,14 @@ const n=`.word-wrapper,
    align-items: center;
    justify-content: space-between;
    gap: 10px;
+
+   animation: tooltipAnimation 0.2s ease-out;
 }
 
 .tooltip-selection {
    display: flex;
    align-items: center;
-   gap: 6px;
+   gap: 12px;
 
    height: 30px;
    width: 100%;
@@ -44,17 +57,37 @@ const n=`.word-wrapper,
    // filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
 
    .tooltip-selection-note {
-      height: 25px;
-      width: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1f4c80c2;
+      height: 100%;
+      padding: 6px;
+      box-sizing: border-box;
+      border-radius: 6px;
 
-      // background-image: url('/images/note.svg');
-      background-image: url('/images/note.svg'), url('/orator-test/images/note.svg');
-      background-size: 25px 25px;
-      background-repeat: no-repeat;
+      &:hover {
+         filter: contrast(0.5);
+      }
+
+      .tooltip-selection-note-icon {
+         height: 25px;
+         width: 25px;
+
+         background-image: url('/images/note.svg'), url('/orator-test/images/note.svg');
+         background-size: 25px 25px;
+         background-repeat: no-repeat;
+      }
+      .tooltip-selection-note-text {
+         font-size: 14px;
+         font-weight: 500;
+         color: whitesmoke;
+      }
    }
 }
 .tooltip-selection-range {
-   height: 100%;
+   // height: 100%;
+   height: 110%;
    flex: 1 1 auto;
    display: flex;
    justify-content: space-between;
@@ -75,15 +108,31 @@ const n=`.word-wrapper,
    }
    .tooltip-selection-left-icon,
    .tooltip-selection-right-icon {
-      height: 100%;
-      width: 30px;
+      // height: 100%;
+      // width: 30px;
+      // background-color: red;
 
-      // background-image: url('/images/highlight_icon.svg');
-      background-image: url('/images/highlight_icon.svg'), url('/orator-test/images/highlight_icon.svg');
-      background-size: 25px 25px;
-      background-repeat: no-repeat;
-      filter: drop-shadow(2px 4px 6px black);
+      // padding: 4px;
+      // border: 1px solid #1f4d80;
+      // border-radius: 3px;
+      // box-sizing: border-box;
+
+      // background-image: url('/images/start-end.svg'), url('/orator-test/images/start-end.svg');
+      // background-size: 25px 25px;
+      // background-repeat: no-repeat;
+
+      display: flex;
+      &:hover {
+         filter: contrast(0.5);
+      }
+
+      img {
+         object-fit: contain;
+         max-width: 20px !important;
+         filter: drop-shadow(2px 4px 6px black);
+      }
    }
+
    .tooltip-selection-left-icon {
    }
    .tooltip-selection-right-icon {
@@ -134,7 +183,6 @@ const n=`.word-wrapper,
       height: 30px;
       width: 30px;
 
-      // background-image: url('/images/sound.svg');
       background-image: url('/images/sound.svg'), url('/orator-test/images/sound.svg');
       background-size: 25px 25px;
       background-repeat: no-repeat;
