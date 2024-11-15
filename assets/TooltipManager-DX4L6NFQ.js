@@ -18,10 +18,25 @@ const n=`.word-wrapper,
    }
 }
 
+@keyframes pulsate {
+   0%,
+   100% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.1;
+   }
+}
+
+.pulsate-animation {
+   animation: pulsate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .tooltip {
    --tooltip-bg-color: whitesmoke;
    --tooltip-pointer-height: 15px;
 
+   cursor: default;
    color: rgb(4, 5, 37);
    background: var(--tooltip-bg-color);
 
@@ -43,7 +58,7 @@ const n=`.word-wrapper,
    animation: tooltipAnimation 0.2s ease-out;
 }
 
-.tooltip-selection {
+#tooltip-selection {
    display: flex;
    align-items: center;
    gap: 12px;
@@ -56,7 +71,7 @@ const n=`.word-wrapper,
    border-radius: 4px;
    // filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
 
-   .tooltip-selection-note {
+   #tooltip-selection-note {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,9 +83,10 @@ const n=`.word-wrapper,
 
       &:hover {
          filter: contrast(0.5);
+         cursor: pointer;
       }
 
-      .tooltip-selection-note-icon {
+      #tooltip-selection-note-icon {
          height: 25px;
          width: 25px;
 
@@ -78,14 +94,14 @@ const n=`.word-wrapper,
          background-size: 25px 25px;
          background-repeat: no-repeat;
       }
-      .tooltip-selection-note-text {
+      #tooltip-selection-note-text {
          font-size: 14px;
          font-weight: 500;
          color: whitesmoke;
       }
    }
 }
-.tooltip-selection-range {
+#tooltip-selection-range {
    // height: 100%;
    height: 110%;
    flex: 1 1 auto;
@@ -101,29 +117,42 @@ const n=`.word-wrapper,
    // border-bottom: 5px solid #1f4d80;
    background-color: #1f4d801c;
 
-   .tooltip-selection-text {
+   #tooltip-selection-delete {
       font-size: 12px;
-      font-style: italic;
+      font-weight: 500;
+      font-style: normal;
       color: #1f4d80;
-   }
-   .tooltip-selection-left-icon,
-   .tooltip-selection-right-icon {
-      // height: 100%;
-      // width: 30px;
-      // background-color: red;
 
-      // padding: 4px;
-      // border: 1px solid #1f4d80;
-      // border-radius: 3px;
-      // box-sizing: border-box;
+      cursor: default;
+      pointer-events: none;
+      filter: opacity(0.4);
 
-      // background-image: url('/images/start-end.svg'), url('/orator-test/images/start-end.svg');
-      // background-size: 25px 25px;
-      // background-repeat: no-repeat;
-
-      display: flex;
       &:hover {
+         cursor: pointer;
          filter: contrast(0.5);
+         scale: 1.1;
+      }
+
+      &.show {
+         cursor: pointer;
+         pointer-events: all;
+         filter: opacity(1);
+      }
+   }
+
+   #tooltip-selection-start,
+   #tooltip-selection-end {
+      display: flex;
+
+      &:hover {
+         cursor: pointer;
+         filter: contrast(0.5);
+      }
+
+      &.disabled {
+         cursor: default;
+         pointer-events: none;
+         filter: opacity(0.4);
       }
 
       img {
@@ -133,26 +162,26 @@ const n=`.word-wrapper,
       }
    }
 
-   .tooltip-selection-left-icon {
+   #tooltip-selection-start {
    }
-   .tooltip-selection-right-icon {
+   #tooltip-selection-end {
    }
 }
 
-.tooltip-buttons {
+#tooltip-buttons {
    width: 100%;
    display: flex;
    justify-content: space-between;
 
-   .details-button,
-   .add-button {
+   #show-details,
+   #add-to-vocabulary {
       cursor: pointer;
       border-radius: 4px;
       outline: none;
       border: none;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.643));
    }
-   .details-button {
+   #show-details {
       color: #1f4d80;
       border: 1px solid #1f4d80;
       &:hover {
@@ -160,7 +189,7 @@ const n=`.word-wrapper,
          background: #1f4d80;
       }
    }
-   .add-button {
+   #add-to-vocabulary {
       color: whitesmoke;
       background: #1f4d80;
       &:hover {
@@ -171,7 +200,7 @@ const n=`.word-wrapper,
    }
 }
 
-.tooltip-body {
+#tooltip-body {
    display: flex;
    gap: 6px;
    font-size: 16px;
@@ -179,7 +208,7 @@ const n=`.word-wrapper,
    font-style: normal;
    color: rgb(3, 5, 48);
 
-   .play-word {
+   #play-word {
       height: 30px;
       width: 30px;
 
@@ -187,10 +216,14 @@ const n=`.word-wrapper,
       background-size: 25px 25px;
       background-repeat: no-repeat;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.643));
+
+      &:hover {
+         cursor: pointer;
+      }
    }
 }
 
-.tooltip-pointer {
+#tooltip-pointer {
    position: absolute;
    height: var(--tooltip-pointer-height);
    width: var(--tooltip-pointer-height);

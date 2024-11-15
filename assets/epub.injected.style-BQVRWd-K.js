@@ -52,6 +52,30 @@ orator {
    --translation2-active-bgColor: rgba(181, 198, 137, 1);
 
    /* margin-right: 0.25rem;  */
+
+   &.orator-highlight {
+      .orator-sentence {
+         // background-color: rgb(132 244 182) !important;
+         color: var(--sentence-active-color) !important;
+         background-color: var(--sentence-active-bgColor) !important;
+      }
+      .orator-translation {
+         // background-color: rgb(167, 158, 249) !important;
+         color: var(--translation-active-color) !important;
+         background-color: var(--translation-active-bgColor) !important;
+      }
+      .orator-translation2 {
+         // background-color: rgb(210, 105, 30) !important;
+         color: var(--translation2-active-color) !important;
+         background-color: var(--translation2-active-bgColor) !important;
+      }
+
+      // text-decoration: underline;
+      // text-decoration-style: solid;
+      // text-decoration-thickness: 2px;
+      // text-decoration-color: black;
+   }
+
    /* =========================== translation base style ========================== */
    /* ============================================================================= */
    .orator-sentence {
