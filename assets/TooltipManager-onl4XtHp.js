@@ -129,7 +129,7 @@ const n=`.word-wrapper,
 
       &:hover {
          cursor: pointer;
-         filter: contrast(0.5);
+         filter: contrast(0.3);
          scale: 1.1;
       }
 
@@ -152,7 +152,7 @@ const n=`.word-wrapper,
       &.disabled {
          cursor: default;
          pointer-events: none;
-         filter: opacity(0.4);
+         filter: opacity(0.3);
       }
 
       img {
