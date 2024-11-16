@@ -125,11 +125,11 @@ const n=`.word-wrapper,
 
       cursor: default;
       pointer-events: none;
-      filter: opacity(0.4);
+      filter: opacity(0.25);
 
       &:hover {
          cursor: pointer;
-         filter: contrast(0.3);
+         filter: contrast(0.25);
          scale: 1.1;
       }
 
