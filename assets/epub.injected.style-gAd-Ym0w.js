@@ -58,10 +58,10 @@ orator {
       // filter: brightness(1.5);
       // filter: hue-rotate(120deg);
 
-      text-decoration: underline;
-      text-decoration-style: solid;
-      text-decoration-thickness: 1px;
-      text-decoration-color: black;
+      // text-decoration: underline;
+      // text-decoration-style: solid;
+      // text-decoration-thickness: 1px;
+      // text-decoration-color: black;
 
       .orator-sentence {
          // background-color: rgb(132 244 182) !important;
