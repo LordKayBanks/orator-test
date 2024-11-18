@@ -54,10 +54,9 @@ orator {
    /* margin-right: 0.25rem;  */
 
    &.orator-highlight {
-      filter: opacity(0.65);
+      // filter: opacity(0.65);
       // filter: brightness(1.5);
       // filter: hue-rotate(120deg);
-
       // text-decoration: underline;
       // text-decoration-style: solid;
       // text-decoration-thickness: 1px;
@@ -207,12 +206,11 @@ orator {
       // filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
       // filter: saturate(1.5);
       // filter: grayscale(75%);
+   }
 
-      // animation: pulsate-active 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-   }
-   &:hover {
-      cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
-   }
+   // &:hover {
+   //    cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
+   // }
 }
 
 /* =========================== active translation highlight =========================== */
@@ -232,17 +230,5 @@ orator {
    color: var(--translation2-active-color) !important;
    background-color: var(--translation2-active-bgColor) !important;
    line-height: 1.4;
-}
-
-@keyframes pulsate-active {
-   0%,
-   100% {
-      // opacity: 1;
-      filter: contrast(1.5);
-   }
-   50% {
-      // opacity: 0.65;
-      filter: contrast(1);
-   }
 }
 `;export{n as default};
