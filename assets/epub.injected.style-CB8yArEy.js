@@ -54,6 +54,15 @@ orator {
    /* margin-right: 0.25rem;  */
 
    &.orator-highlight {
+      filter: opacity(0.65);
+      // filter: brightness(1.5);
+      // filter: hue-rotate(120deg);
+
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 1px;
+      text-decoration-color: black;
+
       .orator-sentence {
          // background-color: rgb(132 244 182) !important;
          color: var(--sentence-active-color) !important;
@@ -69,11 +78,6 @@ orator {
          color: var(--translation2-active-color) !important;
          background-color: var(--translation2-active-bgColor) !important;
       }
-
-      // text-decoration: underline;
-      // text-decoration-style: solid;
-      // text-decoration-thickness: 2px;
-      // text-decoration-color: black;
    }
 
    /* =========================== translation base style ========================== */
@@ -198,6 +202,13 @@ orator {
 
    &:has(.orator-active) {
       cursor: pointer;
+      filter: contrast(1.5);
+
+      // filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+      // filter: saturate(1.5);
+      // filter: grayscale(75%);
+
+      // animation: pulsate-active 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
    }
    &:hover {
       cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
@@ -221,5 +232,17 @@ orator {
    color: var(--translation2-active-color) !important;
    background-color: var(--translation2-active-bgColor) !important;
    line-height: 1.4;
+}
+
+@keyframes pulsate-active {
+   0%,
+   100% {
+      // opacity: 1;
+      filter: contrast(1.5);
+   }
+   50% {
+      // opacity: 0.65;
+      filter: contrast(1);
+   }
 }
 `;export{n as default};
