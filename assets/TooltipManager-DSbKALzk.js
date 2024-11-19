@@ -1,5 +1,5 @@
 const n=`.word-wrapper,
-.hover-word {
+.hovered-word {
    cursor: pointer;
    color: rgb(2, 2, 26);
    background: orange;
@@ -34,7 +34,7 @@ const n=`.word-wrapper,
 
 .tooltip {
    --tooltip-bg-color: whitesmoke;
-   --tooltip-pointer-height: 15px;
+   // --tooltip-pointer-height: 15px;
 
    cursor: default;
    color: rgb(4, 5, 37);
