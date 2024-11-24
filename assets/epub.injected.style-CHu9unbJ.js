@@ -54,9 +54,10 @@ orator {
    /* margin-right: 0.25rem;  */
 
    &.orator-highlight {
-      // filter: opacity(0.65);
+      filter: opacity(0.8);
       // filter: brightness(1.5);
       // filter: hue-rotate(120deg);
+
       // text-decoration: underline;
       // text-decoration-style: solid;
       // text-decoration-thickness: 1px;
