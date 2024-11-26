@@ -8,6 +8,19 @@ const n=`@keyframes skeleton-loading {
 }
 
 orator {
+   /* Create a new stacking context */
+   isolation: isolate;
+
+   /* Reset inherited styles */
+   all: initial;
+
+   /* Preserve some useful inheritances */
+   * {
+      isolation: isolate;
+      all: unset;
+      box-sizing: border-box;
+   }
+
    // --sentence-bgColor : transparent;
    // --translation-color: #373c3f;
    // --translation-bgColor: #fbe1d3;
@@ -212,24 +225,24 @@ orator {
    // &:hover {
    //    cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
    // }
-}
 
-/* =========================== active translation highlight =========================== */
-/* ==================================================================================== */
-.orator-sentence.orator-active {
-   color: var(--sentence-active-color) !important;
-   background-color: var(--sentence-active-bgColor) !important;
-   line-height: 1.4;
-}
-.orator-translation.orator-active {
-   color: var(--translation-active-color) !important;
-   background-color: var(--translation-active-bgColor) !important;
-   line-height: 1.4;
-}
+   /* =========================== active translation highlight =========================== */
+   /* ==================================================================================== */
+   .orator-sentence.orator-active {
+      color: var(--sentence-active-color) !important;
+      background-color: var(--sentence-active-bgColor) !important;
+      line-height: 1.4;
+   }
+   .orator-translation.orator-active {
+      color: var(--translation-active-color) !important;
+      background-color: var(--translation-active-bgColor) !important;
+      line-height: 1.4;
+   }
 
-.orator-translation2.orator-active {
-   color: var(--translation2-active-color) !important;
-   background-color: var(--translation2-active-bgColor) !important;
-   line-height: 1.4;
+   .orator-translation2.orator-active {
+      color: var(--translation2-active-color) !important;
+      background-color: var(--translation2-active-bgColor) !important;
+      line-height: 1.4;
+   }
 }
 `;export{n as default};
