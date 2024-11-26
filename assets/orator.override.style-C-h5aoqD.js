@@ -8,19 +8,6 @@ const n=`@keyframes skeleton-loading {
 }
 
 orator {
-   /* Create a new stacking context */
-   isolation: isolate;
-
-   /* Reset inherited styles */
-   all: initial;
-
-   /* Preserve some useful inheritances */
-   * {
-      isolation: isolate;
-      all: unset;
-      box-sizing: border-box;
-   }
-
    // --sentence-bgColor : transparent;
    // --translation-color: #373c3f;
    // --translation-bgColor: #fbe1d3;
@@ -64,8 +51,21 @@ orator {
    --translation2-active-color: #113c55;
    --translation2-active-bgColor: rgba(181, 198, 137, 1);
 
-   /* margin-right: 0.25rem;  */
+   /* Create a new stacking context */
+   isolation: isolate;
 
+   /* Reset inherited styles */
+   all: initial;
+
+   /* Preserve some useful inheritances */
+   * {
+      isolation: isolate;
+      all: unset;
+      box-sizing: border-box;
+   }
+}
+
+orator {
    &.orator-highlight {
       filter: opacity(0.8);
       // filter: brightness(1.5);
@@ -95,12 +95,19 @@ orator {
 
    /* =========================== translation base style ========================== */
    /* ============================================================================= */
-   .orator-sentence {
+   .orator-sentence,
+   .orator-translation,
+   .orator-translation2 {
       border-radius: 4px;
+      font-size: 1rem !important;
+      line-height: 140% !important;
+      // line-height: normal !important;
+      // font-size: clamp(12px, 1em, 21px) !important;
+   }
+
+   .orator-sentence {
       color: var(--sentence-color) !important;
       background-color: var(--sentence-bgColor) !important;
-      font-size: clamp(12px, 1em, 21px) !important;
-      line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
       &::selection,
@@ -117,22 +124,19 @@ orator {
    }
 
    .orator-translation {
-      border-radius: 4px;
       color: var(--translation-color);
       background: var(--translation-bgColor);
-      font-size: clamp(12px, 1em, 21px) !important;
-      line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
       &.translation-skeleton {
          color: transparent;
-         // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
          background: linear-gradient(
             90deg,
             rgba(17, 60, 85, 0.15) 25%,
             rgba(17, 60, 85, 0.5) 50%,
             rgba(17, 60, 85, 0.15) 75%
          );
+         // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
          background-size: 200% 100%;
          animation: skeleton-loading 3s infinite linear;
       }
@@ -153,11 +157,8 @@ orator {
    }
 
    .orator-translation2 {
-      border-radius: 4px;
       color: var(--translation2-color);
       background: var(--translation2-bgColor);
-      font-size: clamp(12px, 1em, 21px) !important;
-      line-height: 1.4 !important;
       transition: all 0.4s ease-in-out;
 
       &.translation-skeleton {
@@ -202,15 +203,6 @@ orator {
          color: var(--translation2-active-color) !important;
          background-color: var(--translation2-active-bgColor) !important;
       }
-
-      .orator-sentence,
-      .orator-translation,
-      .orator-translation2 {
-         // background: red;
-         // filter: brightness(50%);
-         // background-blend-mode: darken;
-         // backdrop-filter: brightness(50%);
-      }
    }
 
    &:has(.orator-active) {
@@ -222,27 +214,20 @@ orator {
       // filter: grayscale(75%);
    }
 
-   // &:hover {
-   //    cursor: url('/src/assets/cursor images/replace-me.png'), pointer;
-   // }
-
    /* =========================== active translation highlight =========================== */
    /* ==================================================================================== */
    .orator-sentence.orator-active {
       color: var(--sentence-active-color) !important;
       background-color: var(--sentence-active-bgColor) !important;
-      line-height: 1.4;
    }
    .orator-translation.orator-active {
       color: var(--translation-active-color) !important;
       background-color: var(--translation-active-bgColor) !important;
-      line-height: 1.4;
    }
 
    .orator-translation2.orator-active {
       color: var(--translation2-active-color) !important;
       background-color: var(--translation2-active-bgColor) !important;
-      line-height: 1.4;
    }
 }
 `;export{n as default};
