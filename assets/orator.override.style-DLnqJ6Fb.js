@@ -99,10 +99,15 @@ orator {
    .orator-translation,
    .orator-translation2 {
       border-radius: 4px;
-      font-size: 1rem !important;
-      line-height: 140% !important;
       // line-height: normal !important;
       // font-size: clamp(12px, 1em, 21px) !important;
+
+      line-height: 140% !important;
+      font-size: 1.2rem !important;
+
+      @media screen and (max-width: 768px) {
+         font-size: 0.8rem !important;
+      }
    }
 
    .orator-sentence {
