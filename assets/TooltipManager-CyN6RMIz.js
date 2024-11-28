@@ -1,13 +1,4 @@
-const n=`.word-wrapper,
-.hovered-word {
-   cursor: pointer;
-   color: rgb(2, 2, 26);
-   background: orange;
-   border-radius: 4px;
-   transition: all 0.2s ease-in-out;
-}
-
-@keyframes tooltipAnimation {
+const n=`@keyframes tooltipAnimation {
    from {
       opacity: 0;
       height: 0px;
@@ -16,20 +7,6 @@ const n=`.word-wrapper,
       opacity: 1;
       height: 150px;
    }
-}
-
-@keyframes pulsate {
-   0%,
-   100% {
-      opacity: 1;
-   }
-   50% {
-      opacity: 0.1;
-   }
-}
-
-.pulsate-animation {
-   animation: pulsate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .tooltip {
@@ -47,7 +24,9 @@ const n=`.word-wrapper,
    }
 
    --tooltip-bg-color: whitesmoke;
+}
 
+.tooltip {
    position: fixed;
    cursor: default;
    color: rgb(4, 5, 37);
@@ -246,5 +225,31 @@ const n=`.word-wrapper,
       border-right: var(--tooltip-pointer-height) solid transparent;
       border-top: var(--tooltip-pointer-height) solid var(--tooltip-bg-color);
    }
+}
+
+/* ================================================================================= */
+/* ================================================================================= */
+
+.word-wrapper,
+.hovered-word {
+   cursor: pointer;
+   color: rgb(2, 2, 26);
+   background: orange;
+   border-radius: 4px;
+   transition: all 0.2s ease-in-out;
+}
+
+@keyframes pulsate {
+   0%,
+   100% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.1;
+   }
+}
+
+.pulsate-animation {
+   animation: pulsate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 `;export{n as default};
