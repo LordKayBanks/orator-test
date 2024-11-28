@@ -51,6 +51,8 @@ orator {
    --translation2-active-color: #113c55;
    --translation2-active-bgColor: rgba(181, 198, 137, 1);
 
+   // --book-font-size: 1.75rem;
+
    /* Create a new stacking context */
    isolation: isolate;
 
@@ -100,7 +102,9 @@ orator {
    .orator-translation2 {
       border-radius: 4px;
 
-      font-size: clamp(14px, 1.1em, 24px) !important;
+      // font-size: clamp(14px, 1.1em, 24px) !important;
+      font-size: var(--book-font-size) !important;
+      font-size-adjust: 0.5;
       line-height: 140% !important;
       // line-height: normal !important;
    }
