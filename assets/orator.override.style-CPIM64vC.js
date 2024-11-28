@@ -105,7 +105,7 @@ orator {
       line-height: 140% !important;
       font-size: 1.2rem !important;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (min-width: 768px) {
          font-size: 0.8rem !important;
       }
    }
