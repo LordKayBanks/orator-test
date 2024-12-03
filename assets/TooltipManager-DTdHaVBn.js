@@ -180,6 +180,13 @@ const n=`@keyframes tooltipAnimation {
             color: whitesmoke;
             background: #1f4d80;
          }
+
+         &.disabled {
+            cursor: wait;
+            pointer-events: none;
+            color: gray;
+            opacity: 0.6;
+         }
       }
       #add-to-vocabulary {
          color: whitesmoke;
