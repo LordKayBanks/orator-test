@@ -132,19 +132,6 @@ orator {
       background: var(--translation-bgColor);
       transition: all 0.4s ease-in-out;
 
-      &.translation-skeleton {
-         color: transparent;
-         background: linear-gradient(
-            90deg,
-            rgba(17, 60, 85, 0.15) 25%,
-            rgba(17, 60, 85, 0.5) 50%,
-            rgba(17, 60, 85, 0.15) 75%
-         );
-         // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-         background-size: 200% 100%;
-         animation: skeleton-loading 3s infinite linear;
-      }
-
       &::selection,
       .current-word {
          color: var(--translation-active-bgColor) !important;
@@ -164,19 +151,6 @@ orator {
       color: var(--translation2-color);
       background: var(--translation2-bgColor);
       transition: all 0.4s ease-in-out;
-
-      &.translation-skeleton {
-         color: transparent;
-         background: linear-gradient(
-            90deg,
-            rgba(181, 198, 137, 0.35) 25%,
-            rgba(181, 198, 137, 1) 50%,
-            rgba(181, 198, 137, 0.35) 75%
-         );
-         background-size: 200% 100%;
-         animation: skeleton-loading 3s infinite linear;
-         animation-delay: 1.5s;
-      }
 
       &::selection,
       .current-word {
@@ -232,6 +206,42 @@ orator {
    .orator-translation2.orator-active {
       color: var(--translation2-active-color) !important;
       background-color: var(--translation2-active-bgColor) !important;
+   }
+}
+
+body.pre-load {
+   .orator-translation {
+      display: inline-block;
+      width: 60%;
+      height: 1em;
+
+      color: transparent;
+      background: linear-gradient(
+         90deg,
+         rgba(17, 60, 85, 0.15) 25%,
+         rgba(17, 60, 85, 0.5) 50%,
+         rgba(17, 60, 85, 0.15) 75%
+      );
+      // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 3s infinite linear;
+   }
+
+   .orator-translation2 {
+      display: inline-block;
+      width: 40%;
+      height: 1em;
+
+      color: transparent;
+      background: linear-gradient(
+         90deg,
+         rgba(181, 198, 137, 0.35) 25%,
+         rgba(181, 198, 137, 1) 50%,
+         rgba(181, 198, 137, 0.35) 75%
+      );
+      background-size: 200% 100%;
+      animation: skeleton-loading 3s infinite linear;
+      animation-delay: 1.5s;
    }
 }
 `;export{n as default};
