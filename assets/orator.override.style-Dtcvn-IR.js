@@ -210,38 +210,46 @@ orator {
 }
 
 body.pre-load {
-   .orator-translation {
+   .orator-translation,
+   .orator-translation2 {
       display: inline-block;
-      width: 60%;
       height: 1em;
+      overflow: hidden;
 
       color: transparent;
+      background-size: 200% 100%;
+      animation: skeleton-loading 3s infinite linear;
+      animation-delay: 1.5s;
+   }
+
+   .orator-translation {
       background: linear-gradient(
          90deg,
          rgba(17, 60, 85, 0.15) 25%,
          rgba(17, 60, 85, 0.5) 50%,
          rgba(17, 60, 85, 0.15) 75%
       );
-      // background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200% 100%;
-      animation: skeleton-loading 3s infinite linear;
+   }
+   .orator-translation:nth-child(odd) {
+      width: 45%;
+   }
+   .orator-translation:nth-child(even) {
+      width: 65%;
    }
 
    .orator-translation2 {
-      display: inline-block;
-      width: 40%;
-      height: 1em;
-
-      color: transparent;
       background: linear-gradient(
          90deg,
          rgba(181, 198, 137, 0.35) 25%,
          rgba(181, 198, 137, 1) 50%,
          rgba(181, 198, 137, 0.35) 75%
       );
-      background-size: 200% 100%;
-      animation: skeleton-loading 3s infinite linear;
-      animation-delay: 1.5s;
+   }
+   .orator-translation2:nth-child(odd) {
+      width: 45%;
+   }
+   .orator-translation2:nth-child(even) {
+      width: 65%;
    }
 }
 `;export{n as default};
