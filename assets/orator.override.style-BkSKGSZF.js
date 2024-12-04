@@ -217,7 +217,7 @@ body.pre-load {
       height: 1em;
 
       // background: linear-gradient(90deg, #f0f0f0 25%, #7d7d7d 50%, #f0f0f0 75%);
-      color: transparent;
+      color: transparent !important;
       background-size: 200% 100% !important;
       animation: skeleton-loading 1.5s infinite linear;
    }
