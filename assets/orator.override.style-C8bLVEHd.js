@@ -1,13 +1,4 @@
-const n=`@keyframes skeleton-loading {
-   0% {
-      background-position: 100% 0;
-   }
-   100% {
-      background-position: -100% 0;
-   }
-}
-
-orator {
+const n=`orator {
    // --sentence-bgColor : transparent;
    // --translation-color: #373c3f;
    // --translation-bgColor: #fbe1d3;
@@ -209,47 +200,46 @@ orator {
    }
 }
 
+@keyframes skeleton-loading {
+   0% {
+      background-position: 100% 0;
+   }
+   100% {
+      background-position: -100% 0;
+   }
+}
+
 body.pre-load {
    .orator-translation,
    .orator-translation2 {
       display: inline-block;
-      height: 1em;
       overflow: hidden;
+      height: 1em;
 
+      // background: linear-gradient(90deg, #f0f0f0 25%, #7d7d7d 50%, #f0f0f0 75%);
       color: transparent;
-      background-size: 200% 100%;
-      animation: skeleton-loading 3s infinite linear;
-      animation-delay: 1.5s;
+      background-size: 200% 100% !important;
+      animation: skeleton-loading 1.5s infinite linear;
    }
 
    .orator-translation {
+      width: 75%;
       background: linear-gradient(
          90deg,
          rgba(17, 60, 85, 0.15) 25%,
-         rgba(17, 60, 85, 0.5) 50%,
+         rgba(17, 60, 85, 0.35) 50%,
          rgba(17, 60, 85, 0.15) 75%
       );
    }
-   .orator-translation:nth-child(odd) {
-      width: 45%;
-   }
-   .orator-translation:nth-child(even) {
-      width: 65%;
-   }
 
    .orator-translation2 {
+      width: 50%;
       background: linear-gradient(
          90deg,
          rgba(181, 198, 137, 0.35) 25%,
-         rgba(181, 198, 137, 1) 50%,
+         rgba(181, 198, 137, 0.65) 50%,
          rgba(181, 198, 137, 0.35) 75%
       );
-   }
-   .orator-translation2:nth-child(odd) {
-      width: 45%;
-   }
-   .orator-translation2:nth-child(even) {
-      width: 65%;
    }
 }
 `;export{n as default};
