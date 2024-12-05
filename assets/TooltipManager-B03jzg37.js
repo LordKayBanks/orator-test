@@ -172,14 +172,6 @@ const n=`@keyframes tooltipAnimation {
          outline: none;
          border: none;
          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.643));
-      }
-      #show-details {
-         color: #1f4d80;
-         border: 1px solid #1f4d80;
-         &:hover {
-            color: whitesmoke;
-            background: #1f4d80;
-         }
 
          &.disabled {
             cursor: wait;
@@ -188,6 +180,16 @@ const n=`@keyframes tooltipAnimation {
             opacity: 0.6;
          }
       }
+
+      #show-details {
+         color: #1f4d80;
+         border: 1px solid #1f4d80;
+         &:hover {
+            color: whitesmoke;
+            background: #1f4d80;
+         }
+      }
+
       #add-to-vocabulary {
          color: whitesmoke;
          background: #1f4d80;

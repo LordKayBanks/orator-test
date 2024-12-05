@@ -59,6 +59,16 @@ const n=`orator {
 }
 
 orator {
+   .orator-word {
+      cursor: pointer;
+      // color: black;
+      // background-color: rgba(143, 188, 143, 0.55);
+      // background-color: rgba(165, 42, 42, 0.2);
+      color: navy;
+      background-color: coral;
+      border-radius: 3px;
+   }
+
    &.orator-highlight {
       filter: opacity(0.8);
       // filter: brightness(1.5);
@@ -68,6 +78,16 @@ orator {
       // text-decoration-style: solid;
       // text-decoration-thickness: 1px;
       // text-decoration-color: black;
+
+      .orator-word {
+         cursor: pointer;
+         // color: white;
+         // background-color: rgba(143, 188, 143, 0.85);
+         // background-color: rgba(165, 42, 42, 0.5);
+         color: navy;
+         background-color: coral;
+         border-radius: 3px;
+      }
 
       .orator-sentence {
          // background-color: rgb(132 244 182) !important;
@@ -160,6 +180,15 @@ orator {
    &:hover {
       box-sizing: border-box;
 
+      .orator-word {
+         cursor: pointer;
+         // color: white;
+         // background-color: rgba(143, 188, 143, 0.85);
+         // background-color: rgba(165, 42, 42, 0.5);
+         color: navy;
+         background-color: coral;
+         border-radius: 3px;
+      }
       .orator-sentence {
          color: var(--sentence-active-color) !important;
          background-color: var(--sentence-active-bgColor) !important;
