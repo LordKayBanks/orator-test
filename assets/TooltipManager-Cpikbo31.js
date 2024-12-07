@@ -31,6 +31,7 @@ const n=`@keyframes tooltipAnimation {
    cursor: default;
    color: rgb(4, 5, 37);
    background: var(--tooltip-bg-color);
+   backdrop-filter: blur(10px);
 
    padding: 10px;
    border-radius: 20px;
